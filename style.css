@@ -1,9 +1,5 @@
-/* style.css */
-
 /* Reset some default margin and padding */
-body,
-ul,
-li {
+body, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -17,6 +13,44 @@ body {
   height: 100vh;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .media-box {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 400px; /* Limit maximum width */
+    height: auto; /* Allow content to determine height */
+  }
+
+  .media-box li {
+    margin-bottom: 20px; /* Reduce spacing between list items */
+  }
+
+  .media-box a {
+    font-size: 24px; /* Decrease font size for smaller screens */
+  }
+
+  .fa {
+    margin-right: 20px; /* Reduce space between icons and text */
+    font-size: 100px; /* Decrease icon size for smaller screens */
+  }
+}
+
+/* Media Query for even smaller screens */
+@media (max-width: 480px) {
+  .media-box li {
+    margin-bottom: 15px; /* Further reduce spacing between list items */
+  }
+
+  .media-box a {
+    font-size: 20px; /* Decrease font size for even smaller screens */
+  }
+
+  .fa {
+    margin-right: 10px; /* Further reduce space between icons and text */
+    font-size: 80px; /* Decrease icon size for even smaller screens */
+  }
+}
+
 .media-box {
   background-color: #7a1556;
   padding: 20px;
@@ -27,8 +61,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the content vertically within media-box */
-  align-items: center; /* Center the content horizontally within media-box */
+  justify-content: center;
+  align-items: center;
 }
 
 .media-box ul {
@@ -41,7 +75,7 @@ body {
 
 .media-box li {
   margin-bottom: 30px;
-  padding-bottom: 10px; /* Add spacing between the text and the line */
+  padding-bottom: 10px;
 }
 
 .media-box a {
